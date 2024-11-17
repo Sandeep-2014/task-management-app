@@ -1,0 +1,176 @@
+#formcontainer{
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+h1{
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form {
+  max-width: 260px;
+  width: 100%;
+  /* margin-left: 15px; */
+  
+  padding: 20px;
+  padding-top: 0px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  /* padding-right: 15px; */
+  font-family: Arial, sans-serif;
+}
+
+form h3{
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+  font-size: 13px;
+  display: block;
+  margin-top: 10px;
+}
+
+input[type="text"],
+textarea,
+input[type="date"],
+select {
+  width: 95%;
+  padding: 8px;
+  /* margin-right: 35px; */
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#submitTask {
+  margin-top: 15px;
+  padding: 10px;
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+#addedTask, #completedTasksList {
+  display: flex;
+  flex-wrap: wrap;
+  /* margin: auto; */
+  gap: 0;
+}
+
+.completeTaskcontent{
+  opacity: 0.7;
+}
+
+#addedTask > h3, #completedTasksList> h3{
+  flex-basis: 98%;
+  margin: 1%;
+}
+
+#addedTask .content, #completedTasksList .completeTaskcontent {
+  flex-basis: 15%;
+  margin: 1%;
+  padding: 1%;
+  box-shadow: 0px 0px 10px #ccc;
+}
+
+.content h5, .completeTaskcontent h5{
+  margin: 10px 0px;
+}
+
+.completeTaskcontent div{
+  text-decoration: line-through;
+}
+.task-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.task-buttons button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.edit-btn {
+  color: #3498db;
+}
+
+.delete-btn {
+  color: #e74c3c;
+}
+
+.check-btn {
+  color: #2ecc71;
+}
+
+
+
+
+.filters {
+  max-width: 300px;
+  height: 310px;
+  width: 100%;
+  /* border: 2px solid black; */
+  background-color: #f9f9f9;
+  /* border: 1px solid #ddd; */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  /* margin: 20px auto; */
+}
+
+.filters h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* Filter group styling */
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  font-size: 1em;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.filter-group select {
+  width: 100%;
+  padding: 8px;
+  font-size: 1em;
+  color: #333;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+/* Hover and focus effect */
+.filter-group select:hover,
+.filter-group select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Additional styling for a modern look */
+.filter-group select option {
+  padding: 5px;
+  color: #333;
+}

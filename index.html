@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="./task_management.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+  <h1>Task Managment App</h1>
+
+  <div id="formcontainer">
+    <form>
+      <h3>Add New Task</h3>
+
+      <label for="title">Task Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="description">Description of the Task</label>
+      <textarea id="description" name="description" rows="3" required></textarea>
+
+      <label for="due_date">Due Date</label>
+      <input type="date" id="due_date" name="due_date" required>
+
+      <label for="priority">Priority Level</label>
+      <select id="priority" name="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+
+      <button id="submitTask" type="submit">Add Task</button>
+    </form>
+
+    <div class="filters">
+      <h2>Filter Tasks</h2>
+
+      <div class="filter-group">
+        <label for="priority-filter">Priority:</label>
+        <select id="priority-filter">
+          <option value="choose" disabled selected>Choose Priority Level</option>
+          <option value="all">All</option>
+          <option value="low">Low</option>
+          <option value="medium">Medium</option>
+          <option value="high">High</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="due-date-filter">Due Date:</label>
+        <select id="due-date-filter">
+          <option value="choose" disabled selected>Choose Date Range</option>
+          <option value="all">All</option>
+          <option value="today">Today</option>
+          <option value="7">Next 7 Days</option>
+          <!-- <option value="overdue">Overdue</option> -->
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="status-filter">Status:</label>
+        <select id="status-filter">
+          <option value="choose" disabled selected>Choose Task Status</option>
+          <option value="all">All</option>
+          <option value="pending">Pending</option>
+          <option value="completed">Completed</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div id="addedTask"></div>
+
+  <div id="completedTasksList"></div>
+  <script src="./task_management_app.js"></script>
+</body>
+
+</html>
+
+
